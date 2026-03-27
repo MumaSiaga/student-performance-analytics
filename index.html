@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Student Performance Analysis</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+          colors: {
+            paper: "#f9f9f9",
+            ink: "#1a1c1c",
+            muted: "#5f5e5e",
+            line: "#cfcfcf",
+            soft: "#eeeeee",
+            soft2: "#f3f3f3",
+            darkink: "#000000"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #1a1c1c;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-paper border-b border-black/5">
+    <div class="max-w-[1000px] mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+      <div class="text-lg font-bold tracking-tight text-darkink">
+        Student Performance Analysis
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#report" class="text-darkink border-b border-darkink pb-1">Report</a>
+        <a href="#experience" class="text-muted hover:text-darkink transition">Experience</a>
+        <a href="#technologies" class="text-muted hover:text-darkink transition">Technologies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-[1000px] mx-auto px-6 md:px-8 pt-28 pb-24">
+
+    <!-- Hero -->
+    <section class="mb-24">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-4">
+        Data Analytics Project
+      </p>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] text-darkink mb-6">
+        Student Performance Analysis
+      </h1>
+
+      <p class="text-lg md:text-xl text-muted font-light leading-relaxed max-w-2xl">
+        This project explores how study time, attendance, sleep, motivation, parental involvement,
+        and access to resources affect student exam scores.
+      </p>
+    </section>
+
+    <!-- Report -->
+    <section id="report" class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-4">
+        <h2 class="text-sm font-bold tracking-widest uppercase text-darkink md:sticky md:top-24">
+          Report
+        </h2>
+      </div>
+
+      <div class="md:col-span-8 space-y-10">
+        <div class="space-y-5">
+          <h3 class="text-2xl font-bold tracking-tight text-darkink">Main Findings</h3>
+          <p class="text-lg text-muted leading-relaxed">
+            The dashboard shows that the average exam score is around 67. Most students are grouped
+            in the middle score ranges, which suggests that many students perform at an average level.
+          </p>
+          <p class="text-lg text-muted leading-relaxed">
+            The clearest pattern in the dashboard is the relationship between hours studied and exam score.
+            Students who studied more often scored higher. Attendance also had a strong effect, with students
+            who attended more classes generally performing better.
+          </p>
+          <p class="text-lg text-muted leading-relaxed">
+            Other factors such as parental involvement, motivation level, and access to resources also showed
+            some effect on performance, but the differences were smaller. Sleep hours did not show a very strong
+            pattern in this dataset.
+          </p>
+          <p class="text-lg text-muted leading-relaxed">
+            Overall, the dashboard suggests that study time and attendance are the strongest factors linked to
+            exam performance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 py-8 border-y border-black/10">
+          <div class="flex flex-col gap-1">
+            <span class="text-4xl font-bold text-darkink">67</span>
+            <span class="text-xs font-semibold tracking-wider uppercase text-muted">Average Score</span>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <span class="text-4xl font-bold text-darkink">6,607</span>
+            <span class="text-xs font-semibold tracking-wider uppercase text-muted">Student Records</span>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <span class="text-4xl font-bold text-darkink">2</span>
+            <span class="text-xs font-semibold tracking-wider uppercase text-muted">Strongest Factors</span>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <h3 class="text-2xl font-bold tracking-tight text-darkink">What the Dashboard Shows</h3>
+          <p class="text-lg text-muted leading-relaxed">
+            This dashboard combines summary cards, scatter plots, bar charts, and grouped comparisons to explain
+            how different student habits and conditions are related to exam performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mb-24 bg-soft2 p-8 md:p-12 rounded-sm">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold tracking-tight mb-12 text-center text-darkink">
+          My Experience
+        </h2>
+
+        <div class="space-y-14 relative before:absolute before:left-[11px] before:top-4 before:bottom-4 before:w-px before:bg-black/15">
+          <div class="relative pl-12">
+            <div class="absolute left-0 top-1.5 w-[22px] h-[22px] bg-darkink rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-[12px] text-white">data_thresholding</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 text-darkink">01 Cleaning the data with Python</h4>
+            <p class="text-muted leading-relaxed">
+              I started by cleaning the dataset in Python. I checked the columns, handled missing values,
+              and made sure the data was ready for analysis. This helped me understand the structure of the
+              dataset before moving to the next step.
+            </p>
+          </div>
+
+          <div class="relative pl-12">
+            <div class="absolute left-0 top-1.5 w-[22px] h-[22px] bg-darkink rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-[12px] text-white">database</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 text-darkink">02 Uploading the data to Supabase</h4>
+            <p class="text-muted leading-relaxed">
+              After cleaning the dataset, I uploaded it to Supabase so I could store it in a PostgreSQL database.
+              This made it easier to query the data using SQL and gave me a more realistic analytics workflow.
+            </p>
+          </div>
+
+          <div class="relative pl-12">
+            <div class="absolute left-0 top-1.5 w-[22px] h-[22px] bg-darkink rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-[12px] text-white">query_stats</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 text-darkink">03 Querying and exploring with SQL</h4>
+            <p class="text-muted leading-relaxed">
+              I used SQL to group data, calculate averages, compare categories, and explore relationships between
+              variables. This step helped me move from raw data to actual insights that could be visualized.
+            </p>
+          </div>
+
+          <div class="relative pl-12">
+            <div class="absolute left-0 top-1.5 w-[22px] h-[22px] bg-darkink rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-[12px] text-white">bar_chart</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 text-darkink">04 Building the dashboard in Metabase</h4>
+            <p class="text-muted leading-relaxed">
+              I connected Supabase to Metabase and built the dashboard using different charts. At first I had a
+              connection issue, but I solved it by using the session pooler. Once that was fixed, I could create
+              visuals and organize the dashboard properly.
+            </p>
+          </div>
+
+          <div class="relative pl-12">
+            <div class="absolute left-0 top-1.5 w-[22px] h-[22px] bg-darkink rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-[12px] text-white">monitoring</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 text-darkink">05 Enjoying the analytics process</h4>
+            <p class="text-muted leading-relaxed">
+              I enjoyed this project because it felt like solving a problem step by step. I liked turning raw
+              data into something meaningful and being able to explain what the numbers were saying through the
+              dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section id="technologies" class="mb-24">
+      <h2 class="text-sm font-bold tracking-widest uppercase mb-12 text-center text-darkink">
+        Technologies Used
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-x-12 gap-y-8">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-muted">terminal</span>
+          <span class="text-lg font-medium text-darkink">Python</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-muted">storage</span>
+          <span class="text-lg font-medium text-darkink">Supabase</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-muted">database</span>
+          <span class="text-lg font-medium text-darkink">SQL</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-muted">bar_chart</span>
+          <span class="text-lg font-medium text-darkink">Metabase</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-muted">code</span>
+          <span class="text-lg font-medium text-darkink">HTML</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="mb-12 flex flex-col items-center justify-center text-center">
+      <div class="w-full h-px bg-black/10 mb-16"></div>
+
+      <h3 class="text-2xl font-bold tracking-tight mb-6 text-darkink">
+        Download the dashboard report
+      </h3>
+
+      <a
+        href="Metabase - Analysis of Student Performance.pdf"
+        download
+        class="bg-darkink text-white px-8 py-4 text-base font-semibold rounded-sm hover:opacity-90 transition inline-flex items-center gap-3"
+      >
+        <span class="material-symbols-outlined">download</span>
+        Download PDF Report
+      </a>
+    </section>
+  </main>
+
+  <footer class="max-w-[1000px] mx-auto px-6 md:px-8 py-10 text-sm text-muted border-t border-black/5">
+    Student Performance Analysis Project
+  </footer>
+
+</body>
+</html>
